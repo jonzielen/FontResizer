@@ -1,7 +1,7 @@
 (function(){
   this.FontResizer = function(obj) {
     var settings = {
-      lines: 1,
+      lines: 2,
       maxFontSize: 0 // 0 = no minimum
     };
 
