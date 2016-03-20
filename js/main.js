@@ -16,8 +16,6 @@
       return settings;
     }
 
-    //console.log(settings);
-
     // get all elems
     var elems = [].slice.call(obj);
 
@@ -52,7 +50,6 @@
       newElemHeight = getHeightNumber(window.getComputedStyle(newElem, null).height);
       parentElem.removeChild(document.getElementById('tempElem'));
 
-      //console.log(newElemHeight);
       return newElemHeight;
     }
 
@@ -85,13 +82,11 @@
     }
 
     function elemHeightLessThanDefault(elem) {
-      console.log('elem height * settings.lines  '+(getHeightNumber(window.getComputedStyle(elem, null).height) * settings.lines), 'font size: '+getDefaultElemHeight(window.getComputedStyle(elem, null).fontSize));
-
-
-      // settings line height * the height
-      if ((getHeightNumber(window.getComputedStyle(elem, null).height) * settings.lines) <= getDefaultElemHeight(window.getComputedStyle(elem, null).fontSize)) {
+      // current elem height is less than or equal to elem height at current font size
+      if (getHeightNumber(window.getComputedStyle(elem, null).height) <= (getDefaultElemHeight(window.getComputedStyle(elem, null).fontSize) * settings.lines)) {
         return true;
       }
+
       return false;
     }
 
@@ -108,7 +103,6 @@
       }
       elem.style.fontSize = decreaseFontSize(elem)+'px';
       showElem(elem);
-      console.log('----------');
       return;
     });
 
