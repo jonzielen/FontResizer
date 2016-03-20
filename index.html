@@ -7,18 +7,24 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+    <h1 class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
     <h1>Vestibulum vel velit ac orci blandit pharetra vitae eu mi. Nunc volutpat pulvinar quam sed facilisis.</h1>
     <h1>Donec quis lobortis felis, id venenatis lacus.</h1>
     <h1>Nunc eu faucibus purus. Cras suscipit elit nec sapien malesuada, eu hendrerit nunc rhoncus. Aenean non leo ante.</h1>
-    <h1>Donec mattis purus at magna vestibulum, eu vestibulum purus sollicitudin. Integer dignissim convallis sollicitudin. Nullam a feugiat leo, vitae ornare metus.</h1>
+    <h1 id="test">Donec mattis purus at magna vestibulum, eu vestibulum purus sollicitudin. Integer dignissim convallis sollicitudin. Nullam a feugiat leo, vitae ornare metus.</h1>
   </div>
 
   <script src="js/main.js"></script>
   <script>
-    FontResizer(document.querySelectorAll('h1')).options({
+    FontResizer(document.querySelectorAll('h1')).resize();
+
+    FontResizer(document.querySelectorAll('.intro')).resize({
+      maxFontSize: '32px'
+    });
+
+    FontResizer(document.querySelectorAll('#test')).resize({
       lines: 2,
-      maxFontSize: '22px'
+      maxFontSize: '32px'
     });
   </script>
 </body>

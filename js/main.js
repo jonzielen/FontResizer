@@ -20,7 +20,6 @@ var FontResizer = function(obj) {
     var elems = [].slice.call(obj);
 
     // resets all heights and change opacity
-    // only happens 1st time
     elems.map(function(elem) {
       resetFontHeight(elem);
       hideElem(elem);
@@ -86,6 +85,7 @@ var FontResizer = function(obj) {
     }
 
     function elemFontLessThanDefault(elem) {
+      // font size is less than/equal to max font, OR if max font size set
       if (getHeightNumber(window.getComputedStyle(elem, null).fontSize) <= getHeightNumber(settings.maxFontSize) || getHeightNumber(settings.maxFontSize) === 0) {
         return true;
       }
@@ -103,6 +103,6 @@ var FontResizer = function(obj) {
   }
 
   return {
-    options: setSettings
+    resize: setSettings
   };
 };
