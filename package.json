@@ -1,0 +1,25 @@
+{
+  "name": "font_resizer",
+  "version": "0.0.1",
+  "description": "Resizes text based on line available space.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonzielen/FontResizer.git"
+  },
+  "keywords": [
+    "javascript",
+    "font",
+    "font",
+    "resize"
+  ],
+  "author": "Jon Z.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonzielen/FontResizer/issues"
+  },
+  "homepage": "https://github.com/jonzielen/FontResizer#readme"
+}
