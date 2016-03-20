@@ -1,35 +1,30 @@
-(function(){
-  this.FontResizer = function(obj) {
-    var settings = {
-      lines: 2,
-      maxFontSize: 0 // 0 = no minimum
-    };
+var FontResizer = function(obj) {
+  var settings = {
+    lines: 1,
+    maxFontSize: 0 // 0 = no minimum
+  };
 
-    function setSettings(newSettings) {
-      for (var newSetting in newSettings) {
-        if (newSettings.hasOwnProperty(newSetting)) {
-          settings[newSetting] = newSettings[newSetting];
-        }
+  function setSettings(newSettings) {
+    for (var newSetting in newSettings) {
+      if (newSettings.hasOwnProperty(newSetting)) {
+        settings[newSetting] = newSettings[newSetting];
       }
-
-      //console.log(settings);
-      return settings;
     }
 
+    init(settings);
+  }
+
+  // initializing function
+  function init(settings) {
     // get all elems
     var elems = [].slice.call(obj);
 
-    // initializing function
-    function init() {
-      // resets all heights and change opacity
-      // only happens 1st time
-      elems.map(function(elem) {
-        resetFontHeight(elem);
-        hideElem(elem);
-      });
-    }
-
-    init();
+    // resets all heights and change opacity
+    // only happens 1st time
+    elems.map(function(elem) {
+      resetFontHeight(elem);
+      hideElem(elem);
+    });
 
     // get elem tag, make new elem, hide it, get height, remove elem
     function getDefaultElemHeight(s) {
@@ -105,9 +100,9 @@
       showElem(elem);
       return;
     });
+  }
 
-    return {
-      options: setSettings
-    };
+  return {
+    options: setSettings
   };
-})();
+};
