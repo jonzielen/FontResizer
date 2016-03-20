@@ -1,11 +1,8 @@
 {
   "name": "font_resizer",
   "version": "0.0.1",
-  "description": "Resizes text based on line available space.",
+  "description": "Resizes text based on available line space.",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonzielen/FontResizer.git"
